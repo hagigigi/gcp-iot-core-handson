@@ -21,7 +21,7 @@ openssl req -x509 -newkey rsa:2048 -keyout rsa_private.pem -nodes -out rsa_cert.
 
 ## 実行
 ```
-python iot_mqtt_sample.py --registry_id=my-registry --cloud_region=us-central1 --project_id=redash-btc --device_id=my-device --algorithm=RS256 --private_key_file=./rsa_private.pem device_demo
+python iot_mqtt_sample.py --registry_id=(your-registry-name) --cloud_region=(your-region) --project_id=(your-project-id) --device_id=(your-device) --algorithm=RS256 --private_key_file=./rsa_private.pem
 ```
 
 
