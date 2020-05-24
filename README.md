@@ -18,6 +18,8 @@ wget https://pki.goog/roots.pem
 openssl req -x509 -newkey rsa:2048 -keyout rsa_private.pem -nodes -out rsa_cert.pem -subj "/CN=unused"
 ```
 
+## GCP設定
+[クイックスタート参照](https://cloud.google.com/iot/docs/quickstart)
 
 ## 実行
 ```
