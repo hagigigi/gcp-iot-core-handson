@@ -241,7 +241,7 @@ def parse_command_line_args():
     parser.add_argument(
             '--num_messages',
             type=int,
-            default=10,
+            default=100,
             help='Number of messages to publish.')
     parser.add_argument(
             '--private_key_file',
@@ -297,7 +297,7 @@ def mqtt_device_sample(args):
 
         # create input data
         json_payload = {
-            "data": str(random.uniform(10, 25)),
+            "data": random.uniform(10, 25),
             "timestamp": str(datetime.datetime.now())
         }
         payload = json.dumps(json_payload)
@@ -322,8 +322,8 @@ def mqtt_device_sample(args):
         # delivery.
         client.publish(mqtt_topic, payload, qos=1)
 
-        # Wait 5 second.
-        time.sleep(5)
+        # Wait 10 second.
+        time.sleep(10)
 
     # [END iot_mqtt_run]
 
